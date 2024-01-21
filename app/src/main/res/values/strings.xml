@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">NFCApplication</string>
+    <string name="button_label">NFC done</string>
+</resources>
