@@ -1,5 +1,6 @@
 package com.example.nfcapplication
 
+import android.content.ContentValues.TAG
 import android.nfc.NfcAdapter
 import android.nfc.Tag
 import android.nfc.tech.NfcF
@@ -90,7 +91,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val intent = intent
-        val tag = intent.getParcelableExtra<Parcelable>(NfcAdapter.EXTRA_TAG) as Tag?
+        val tag = intent.putExtra(NfcAdapter.EXTRA_TAG,TAG) as Tag?
         val techF = NfcF.get(tag)
         val button = findViewById<Button>(R.id.button01)
         button.setOnClickListener { System.exit(RESULT_OK) }
